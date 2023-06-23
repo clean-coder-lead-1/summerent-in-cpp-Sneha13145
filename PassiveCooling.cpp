@@ -1,4 +1,5 @@
 #include "PassiveCooling.h"
+#include <stdio.h>
 
 PassiveCooling::PassiveCooling()
 {
