@@ -1,0 +1,6 @@
+#include "PassiveCooling.h"
+
+PassiveCooling()
+{
+
+}
