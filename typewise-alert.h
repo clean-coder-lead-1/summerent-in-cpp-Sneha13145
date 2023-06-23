@@ -1,4 +1,4 @@
-#pragma once
+n#pragma once
 
 typedef enum {
   PASSIVE_COOLING,
@@ -27,9 +27,9 @@ typedef struct {
   char brand[48];
 } BatteryCharacter;
 
-double lowerTempLimit[3] = {0,0,0};
-double upperTempLimit[3] = {35,45,40};
-const char* Temperature[3] = {"Normal", "too low", "too high"};
+extern double lowerTempLimit[3] = {0,0,0};
+extern double upperTempLimit[3] = {35,45,40};
+extern const char* Temperature[3] = {"Normal", "too low", "too high"};
 
 void checkAndAlert(
   AlertTarget alertTarget, BatteryCharacter batteryChar, double temperatureInC);
