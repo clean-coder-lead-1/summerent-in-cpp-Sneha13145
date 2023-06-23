@@ -1,7 +1,5 @@
 #include "typewise-alert.h"
 #include <stdio.h>
-#include <string>
-#include <cstring>
 
 BreachType inferBreach(double value, double lowerLimit, double upperLimit) {
   if(value < lowerLimit) {
@@ -55,9 +53,7 @@ void sendToController(BreachType breachType) {
 
 void sendToEmail(BreachType breachType) {
   const char* recepient = "a.b@c.com";
-  std::string string1 = "Hi, the temperature is";
-  std::string string2 = Temperature[breachType];
-  std::string Information = strcat(string1+string2);
+  const char* temp = Temperature[breachType];
   printf("To: %s\n", recepient);
-  printf(Information);
+  printf("Hi, the temperature is %s\n", temp);
 }
