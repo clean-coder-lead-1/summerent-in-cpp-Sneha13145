@@ -16,6 +16,7 @@ BreachType inferBreach(double value, double lowerLimit, double upperLimit);
 BreachType classifyTemperatureBreach(CoolingType coolingType, double temperatureInC);
 
 void calculateTemperatureLimits(CoolingType coolingType, int& lowerLimit, int& upperLimit);
+void initialize();
 
 typedef enum {
   TO_CONTROLLER,
@@ -26,10 +27,6 @@ typedef struct {
   CoolingType coolingType;
   char brand[48];
 } BatteryCharacter;
-
-extern double lowerTempLimit[3] = {0,0,0};
-extern double upperTempLimit[3] = {35,45,40};
-extern const char* Temperature[3] = {"Normal", "too low", "too high"};
 
 void checkAndAlert(
   AlertTarget alertTarget, BatteryCharacter batteryChar, double temperatureInC);
