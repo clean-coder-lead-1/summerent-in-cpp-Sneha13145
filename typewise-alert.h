@@ -36,3 +36,4 @@ void checkAndAlert(
 void sendAlert(AlertTarget alertTarget, BreachType breachType);
 void sendToController(BreachType breachType);
 void sendToEmail(BreachType breachType);
+
