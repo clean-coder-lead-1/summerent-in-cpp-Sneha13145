@@ -29,6 +29,7 @@ typedef struct {
 
 double lowerTempLimit[3] = {0,0,0};
 double upperTempLimit[3] = {35,45,40};
+std::string Temperature[3] = {"Normal", "too low", "too high"};
 
 void checkAndAlert(
   AlertTarget alertTarget, BatteryCharacter batteryChar, double temperatureInC);
