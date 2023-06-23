@@ -27,9 +27,8 @@ typedef struct {
   char brand[48];
 } BatteryCharacter;
 
-std::vector<double> lowerTempLimit;
-std::vector<double> upperTempLimit;
-std::map<coolingType, double> temperatureLimits;
+double lowerTempLimit[3] = {0,0,0};
+double upperTempLimit[3] = {35,45,40};
 
 void checkAndAlert(
   AlertTarget alertTarget, BatteryCharacter batteryChar, double temperatureInC);
