@@ -1,6 +1,12 @@
 #include "typewise-alert.h"
 #include <stdio.h>
 
+void initialize() {
+  double lowerTempLimit[3] = {0,0,0};
+  double upperTempLimit[3] = {35,45,40};
+  const char* Temperature[3] = {"Normal", "too low", "too high"};
+}
+
 BreachType inferBreach(double value, double lowerLimit, double upperLimit) {
   if(value < lowerLimit) {
     return TOO_LOW;
@@ -27,6 +33,7 @@ void calculateTemperatureLimits(CoolingType coolingType, int& lowerLimit, int& u
 void checkAndAlert(
     AlertTarget alertTarget, BatteryCharacter batteryChar, double temperatureInC) {
 
+  initialize();
   BreachType breachType = classifyTemperatureBreach(
     batteryChar.coolingType, temperatureInC
   );
